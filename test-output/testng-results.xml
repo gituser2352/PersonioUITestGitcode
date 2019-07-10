@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegressionSuite" duration-ms="63063" started-at="2019-07-10T21:23:22Z" finished-at="2019-07-10T21:24:25Z">
+    <groups>
+    </groups>
+    <test name="Validating HomePage Header Section" duration-ms="63063" started-at="2019-07-10T21:23:22Z" finished-at="2019-07-10T21:24:25Z">
+      <class name="personio.PersonioUIHomePageHeaderlinksTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:personio.PersonioUIHomePageHeaderlinksTest@5e82df6a]" name="initialize" is-config="true" duration-ms="6126" started-at="2019-07-10T21:23:22Z" finished-at="2019-07-10T21:23:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="VerifyHomePageHeaderlinks()[pri:0, instance:personio.PersonioUIHomePageHeaderlinksTest@5e82df6a]" name="VerifyHomePageHeaderlinks" duration-ms="56870" started-at="2019-07-10T21:23:28Z" finished-at="2019-07-10T21:24:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageHeaderlinks -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:personio.PersonioUIHomePageHeaderlinksTest@5e82df6a]" name="teardown" is-config="true" duration-ms="53" started-at="2019-07-10T21:24:25Z" finished-at="2019-07-10T21:24:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- personio.PersonioUIHomePageHeaderlinksTest -->
+    </test> <!-- Validating HomePage Header Section -->
+  </suite> <!-- RegressionSuite -->
+</testng-results>

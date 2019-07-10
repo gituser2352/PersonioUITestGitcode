@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [RegressionSuite]">
+  <listeners>
+    <listener class-name="raisin.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Validating HomePage Header Section(failed)">
+    <classes>
+      <class name="raisin.RaisinUIHomePageHeaderlinksTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="VerifyHomePageHeaderlinks"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- raisin.RaisinUIHomePageHeaderlinksTest -->
+    </classes>
+  </test> <!-- Validating HomePage Header Section(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->
