@@ -23,9 +23,11 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
@@ -276,6 +278,27 @@ public void AttachFile(String path) throws AWTException{
 	   robot.keyRelease(KeyEvent.VK_ENTER);
 	
 	   
+}
+
+//Draw highlighter for an element
+public void drawHighlight(String elementname) throws IOException
+{
+	String elementXpath=GetXpath(elementname);
+	WebElement element =driver.findElement(By.xpath(elementXpath));
+	try {
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+		js.executeScript("arguments[0].style.border='2px groove red'",
+				element);
+	
+		log.info("Highlighted successfully the element "+elementname);
+		getScreenshot(elementname);
+		
+	} catch (Exception e) {
+		log.error("Failed to Highlight the element "+elementname);
+		getScreenshot(elementname);
+	}
+	
+	
 }
 
 }

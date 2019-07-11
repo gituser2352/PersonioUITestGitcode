@@ -60,18 +60,25 @@ public class PersonioUIComponents extends base{
 		ActualHeaderelements[3]=b.getelementtext("Headerelement4");
 		ActualHeaderelements[4]=b.getelementtext("Headerelement5");
 		
-		
+		String Highlighelement="Headerelement";
+		int j=1;
 		//verify if the text of each header element is displayed correctly or not
 		for(int i=0;i<5;i++)
 		{
 			try {
+				
 				Assert.assertTrue(ActualHeaderelements[i].equalsIgnoreCase(ExpectedHeaderelemnts[i]));
+				Highlighelement=Highlighelement+j;
+				System.out.println("Element to highlight is"+Highlighelement);
+				b.drawHighlight(Highlighelement);
 				log.info("Text is displayed correctly for the the element "+ExpectedHeaderelemnts[i]);
 				System.out.println("Text is displayed correctly for the the element "+ExpectedHeaderelemnts[i]);
+				Highlighelement="Headerelement";
+				j++;
 			} catch (Exception e) {
 
 				log.error("Text is displayed wrongly for the the element "+ExpectedHeaderelemnts[i]+e);
-				System.out.println("Text is displayed wrongly correctly for the the element "+ExpectedHeaderelemnts[i]);
+				System.out.println("Text is displayed wrongly for the the element "+ExpectedHeaderelemnts[i]);
 			}
 
 			
